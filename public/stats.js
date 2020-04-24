@@ -1,6 +1,6 @@
 // get all workout data from back-end
 
-fetch("/api/workouts/bulk")
+fetch("/api/workouts/range")
   .then(response => {
     return response.json();
   })
@@ -48,13 +48,13 @@ function populateChart(data) {
     type: "line",
     data: {
       labels: [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
+        "Day 1",
+        "Day 2",
+        "Day 3",
+        "Day 4",
+        "Day 5",
+        "Day 6",
+        "Day 7"
       ],
       datasets: [
         {

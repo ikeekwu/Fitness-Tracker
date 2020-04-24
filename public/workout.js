@@ -1,3 +1,11 @@
+function totalDuration(obj) {
+  let total = 0;
+  for(let i = 0; i < obj.exercises.length; i++) {
+    total += obj.exercises[i].duration;
+  }
+  return total
+}
+
 async function initWorkout() {
   const lastWorkout = await API.getLastWorkout();
   console.log("Last workout:", lastWorkout);
@@ -8,7 +16,7 @@ async function initWorkout() {
 
     const workoutSummary = {
       date: formatDate(lastWorkout.day),
-      totalDuration: lastWorkout.totalDuration,
+      totalDuration: totalDuration(lastWorkout),
       numExercises: lastWorkout.exercises.length,
       ...tallyExercises(lastWorkout.exercises)
     };

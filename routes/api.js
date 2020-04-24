@@ -12,10 +12,10 @@ router.post("/api/workouts", ({body}, res) => {
     });
 });
 
-router.post("/api/workouts/bulk", ({body}, res) => {
-    Workout.insertMany(body)
+router.get("/api/workouts/range", (req, res) => {
+    Workout.find({})
         .then(dbWorkout => {
-            res.json(dbWorkout);
+            res.send(dbWorkout);
         })
         .catch(err => {
             res.status(400).json(err);
