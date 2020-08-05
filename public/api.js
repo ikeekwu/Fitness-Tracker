@@ -1,4 +1,6 @@
 const API = {
+
+  // Function to get last work out
   async getLastWorkout() {
     let res;
     try {
