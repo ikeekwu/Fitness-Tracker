@@ -24,6 +24,7 @@ router.get("/api/workouts/range", (req, res) => {
         });
 });
 
+// Route for editing specific workouts.
 router.put("/api/workouts/:id", ({body, params}, res) => {
     Workout.update({"_id":params.id}, {$push: {exercises: body}})
     .then(dbWorkout => {
