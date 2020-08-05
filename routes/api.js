@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const Workout = require("../models/workout");
 
+// Route to post workouts to database 
 router.post("/api/workouts", ({body}, res) => {
     console.log(body)
     Workout.create(body)
