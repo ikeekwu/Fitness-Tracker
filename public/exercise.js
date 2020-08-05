@@ -98,6 +98,7 @@ function validateInputs() {
   }
 }
 
+// Simple form submit
 async function handleFormSubmit(event) {
   event.preventDefault();
 
