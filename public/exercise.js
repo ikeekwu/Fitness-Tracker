@@ -33,6 +33,7 @@ async function initExercise() {
 
 initExercise();
 
+// Function to keep track of the different workouts 
 function handleWorkoutTypeChange(event) {
   workoutType = event.target.value;
 
