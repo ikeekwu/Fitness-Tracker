@@ -51,6 +51,7 @@ function handleWorkoutTypeChange(event) {
   validateInputs();
 }
 
+// function that validates the user inputs so thatwe are only accepting useful information
 function validateInputs() {
   let isValid = true;
 
