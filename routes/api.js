@@ -35,6 +35,7 @@ router.put("/api/workouts/:id", ({body, params}, res) => {
     })
 });
 
+// Route that grabs the preivously stored workouts.
 router.get("/api/workouts", (req, res) => {
     Workout.find({})
         .then(dbWorkout => {
