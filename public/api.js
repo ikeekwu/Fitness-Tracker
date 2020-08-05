@@ -12,6 +12,8 @@ const API = {
 
     return json[json.length - 1];
   },
+
+  // Function to add workout 
   async addExercise(data) {
     const id = location.search.split("=")[1];
 
