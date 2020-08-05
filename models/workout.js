@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+// creates schema for storing workouts.
 const Schema = mongoose.Schema;
 
 const workoutSchema = new Schema({
